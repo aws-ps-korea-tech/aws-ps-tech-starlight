@@ -1,0 +1,71 @@
+backend:
+  name: github
+  repo: aws-ps-korea-tech/starlight
+  branch: main
+  auth_type: pkce
+  app_id: # GitHub OAuth App Client ID (아래 설정 후 입력)
+
+media_folder: "src/content/docs/_media"
+public_folder: "/_media"
+
+collections:
+  - name: "amazon-s3"
+    label: "Amazon S3"
+    folder: "src/content/docs/amazon-s3"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string", required: false }
+      - { label: "Sidebar Order", name: "sidebar", widget: "object", fields: [{ label: "Order", name: "order", widget: "number", required: false }] }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "aws-guide"
+    label: "대학 고객을 위한 AWS 길라잡이"
+    folder: "src/content/docs/aws"
+    create: true
+    nested:
+      depth: 3
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string", required: false }
+      - { label: "Sidebar Order", name: "sidebar", widget: "object", fields: [{ label: "Order", name: "order", widget: "number", required: false }] }
+      - { label: "Body", name: "body", widget: "markdown" }
+    meta: { path: { widget: "string", label: "Path", index_file: "index" } }
+
+  - name: "omics-on-aws"
+    label: "Omics on AWS"
+    folder: "src/content/docs/omics-on-aws"
+    create: true
+    nested:
+      depth: 3
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string", required: false }
+      - { label: "Sidebar Order", name: "sidebar", widget: "object", fields: [{ label: "Order", name: "order", widget: "number", required: false }] }
+      - { label: "Body", name: "body", widget: "markdown" }
+    meta: { path: { widget: "string", label: "Path", index_file: "index" } }
+
+  - name: "aws-batch"
+    label: "AWS Batch"
+    folder: "src/content/docs/aws-batch"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string", required: false }
+      - { label: "Sidebar Order", name: "sidebar", widget: "object", fields: [{ label: "Order", name: "order", widget: "number", required: false }] }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "aws-blast"
+    label: "AWS BLAST Performance Testing"
+    folder: "src/content/docs/aws-blast-performance-testing"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string", required: false }
+      - { label: "Sidebar Order", name: "sidebar", widget: "object", fields: [{ label: "Order", name: "order", widget: "number", required: false }] }
+      - { label: "Body", name: "body", widget: "markdown" }
