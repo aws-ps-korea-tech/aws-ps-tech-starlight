@@ -3,7 +3,7 @@ backend:
   repo: aws-ps-korea-tech/starlight
   branch: main
   auth_type: pkce
-  app_id: Ov23linepf2QM9srwDZM
+  app_id: Ov23liWRRJjYvKLdIz95
 
 media_folder: "src/content/docs/_media"
 public_folder: "/_media"
