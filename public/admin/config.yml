@@ -2,8 +2,8 @@ backend:
   name: github
   repo: aws-ps-korea-tech/starlight
   branch: main
-  auth_type: pkce
-  app_id: Ov23liWRRJjYvKLdIz95
+  base_url: https://decapbridge.com
+  auth_endpoint: api/auth
 
 media_folder: "src/content/docs/_media"
 public_folder: "/_media"
