@@ -9,7 +9,6 @@ backend:
   auth_token_endpoint: /sites/fe1cd832-eb7f-48c6-9d72-4fbccca461c8/token
   gateway_url: https://gateway.decapbridge.com
 
-  # See who did what (optional)
   commit_messages:
     create: Create {{collection}} "{{slug}}" - {{author-name}} <{{author-login}}> via DecapBridge
     update: Update {{collection}} "{{slug}}" - {{author-name}} <{{author-login}}> via DecapBridge
@@ -18,80 +17,163 @@ backend:
     deleteMedia: Delete "{{path}}" - {{author-name}} <{{author-login}}> via DecapBridge
     openAuthoring: Message {{message}} - {{author-name}} <{{author-login}}> via DecapBridge
 
-# Enable PKCE fields (optional, recommended)
 auth:
   email_claim: email
   first_name_claim: first_name
   last_name_claim: last_name
   avatar_url_claim: avatar_url
 
-# Better Decap + Bridge logo (optional)
 logo_url: https://decapbridge.com/decapcms-with-bridge.svg
-
-# Add site links in Decap CMS (optional)
 site_url: https://main.d2ueu24r76vqp9.amplifyapp.com
 
 media_folder: "src/content/docs/_media"
 public_folder: "/_media"
 
 collections:
+  # === Amazon S3 ===
   - name: "amazon-s3"
     label: "Amazon S3"
     folder: "src/content/docs/amazon-s3"
     create: true
     slug: "{{slug}}"
+    extension: "md"
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "string", required: false }
-      - { label: "Sidebar Order", name: "sidebar", widget: "object", fields: [{ label: "Order", name: "order", widget: "number", required: false }] }
       - { label: "Body", name: "body", widget: "markdown" }
 
-  - name: "aws-guide"
-    label: "대학 고객을 위한 AWS 길라잡이"
+  # === 대학 고객을 위한 AWS 길라잡이 ===
+  - name: "aws-top"
+    label: "AWS 길라잡이 (상위)"
     folder: "src/content/docs/aws"
     create: true
-    nested:
-      depth: 3
     slug: "{{slug}}"
+    extension: "md"
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "string", required: false }
-      - { label: "Sidebar Order", name: "sidebar", widget: "object", fields: [{ label: "Order", name: "order", widget: "number", required: false }] }
       - { label: "Body", name: "body", widget: "markdown" }
-    meta: { path: { widget: "string", label: "Path", index_file: "index" } }
 
-  - name: "omics-on-aws"
-    label: "Omics on AWS"
+  - name: "aws-learning"
+    label: "AWS 길라잡이 > 연구자를 위한 AWS 학습 기초"
+    folder: "src/content/docs/aws/aws"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "aws-services"
+    label: "AWS 길라잡이 > 연구자를 위한 AWS 서비스"
+    folder: "src/content/docs/aws/aws-H9C"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "aws-ec2"
+    label: "AWS 길라잡이 > EC2 따라잡기"
+    folder: "src/content/docs/aws/ec2"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  # === Omics on AWS ===
+  - name: "omics-top"
+    label: "Omics on AWS (상위)"
     folder: "src/content/docs/omics-on-aws"
     create: true
-    nested:
-      depth: 3
     slug: "{{slug}}"
+    extension: "md"
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "string", required: false }
-      - { label: "Sidebar Order", name: "sidebar", widget: "object", fields: [{ label: "Order", name: "order", widget: "number", required: false }] }
       - { label: "Body", name: "body", widget: "markdown" }
-    meta: { path: { widget: "string", label: "Path", index_file: "index" } }
 
+  - name: "omics-healthomics"
+    label: "Omics on AWS > AWS HealthOmics"
+    folder: "src/content/docs/omics-on-aws/aws-healthomics"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "omics-hail"
+    label: "Omics on AWS > Hail on AWS"
+    folder: "src/content/docs/omics-on-aws/hail-on-aws"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "omics-multimodal"
+    label: "Omics on AWS > Multi-modal analysis"
+    folder: "src/content/docs/omics-on-aws/multi-modal-analysis"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "omics-nextflow"
+    label: "Omics on AWS > Nextflow"
+    folder: "src/content/docs/omics-on-aws/nextflow"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "omics-hpp"
+    label: "Omics on AWS > HPP Production Workflows"
+    folder: "src/content/docs/omics-on-aws/hpp-production-workflows"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  # === AWS Batch ===
   - name: "aws-batch"
     label: "AWS Batch"
     folder: "src/content/docs/aws-batch"
     create: true
     slug: "{{slug}}"
+    extension: "md"
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "string", required: false }
-      - { label: "Sidebar Order", name: "sidebar", widget: "object", fields: [{ label: "Order", name: "order", widget: "number", required: false }] }
       - { label: "Body", name: "body", widget: "markdown" }
 
+  # === AWS BLAST Performance Testing ===
   - name: "aws-blast"
     label: "AWS BLAST Performance Testing"
     folder: "src/content/docs/aws-blast-performance-testing"
     create: true
     slug: "{{slug}}"
+    extension: "md"
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "string", required: false }
-      - { label: "Sidebar Order", name: "sidebar", widget: "object", fields: [{ label: "Order", name: "order", widget: "number", required: false }] }
       - { label: "Body", name: "body", widget: "markdown" }
