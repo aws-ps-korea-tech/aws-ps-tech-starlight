@@ -3,7 +3,7 @@ backend:
   repo: aws-ps-korea-tech/starlight
   branch: main
   auth_type: pkce
-  app_id: # GitHub OAuth App Client ID (아래 설정 후 입력)
+  app_id: Ov23linepf2QM9srwDZM
 
 media_folder: "src/content/docs/_media"
 public_folder: "/_media"
