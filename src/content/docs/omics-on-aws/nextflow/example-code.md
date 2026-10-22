@@ -1,8 +1,8 @@
 ---
 title: "Example code"
-sidebar:
-  order: 0
 ---
+
+# Example code
 
 Python으로 Nextflow 작성하기
 

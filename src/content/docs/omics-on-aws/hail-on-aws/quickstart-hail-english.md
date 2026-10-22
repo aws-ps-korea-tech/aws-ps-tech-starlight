@@ -1,8 +1,8 @@
 ---
 title: "Quickstart Hail (English)"
-sidebar:
-  order: 4
 ---
+
+# Quickstart Hail (English)
 
 Deploy an [EMR cluster on AWS](https://aws.amazon.com/emr/), with Spark, [Hail](https://hail.is/index.html), [Zeppelin](https://zeppelin.apache.org/) and [Ensembl VEP](https://ensembl.org/info/docs/tools/vep/index.html) using CloudFormation service.
 
@@ -77,37 +77,37 @@ aws s3 sync . s3://$AWS_BUCKET/quickstart-hail/ --exclude ".git/*"
 
 3\. Connect to the Amazon S3 console and check the bucket and directory.
 
-[![image.png](./_images/uaCimage.png)](https://www.aws-ps-tech.kr/uploads/images/gallery/2024-12/uaCimage.png)
+![image.png](_assets/80b0dbd594e9.png)
 
 # Run the CloudFormation stack
 
 1\. Go to the [CloudFormation](https://us-east-1.console.aws.amazon.com/cloudformation/home?region=us-east-1) console.
 
-![Screenshot_2024-06-21_at_10.26.55_PM.png](./_images/wADscreenshot-2024-06-21-at-10-26-55-pm.png)
+![Screenshot_2024-06-21_at_10.26.55_PM.png](_assets/4c96ca495d1d.png)
 
 2\. Creates a new stack. At this time, select **`With new resources (standard)`**.
 
-![Screenshot_2024-06-21_at_10.27.22_PM.png](./_images/M7Hscreenshot-2024-06-21-at-10-27-22-pm.png)
+![Screenshot_2024-06-21_at_10.27.22_PM.png](_assets/8ac7a33340d7.png)
 
 3\. Go to the Amazon S3 console, select `hail-launcher.template.yaml` in the template directory you uploaded earlier, and click `<strong>Copy URL</strong>`. The path is as follows:
 
 **{bucket name} &gt; quickstart-hail &gt; templates &gt; hail-launcher.template.yaml**
 
-[![image.png](./_images/image.png)](https://www.aws-ps-tech.kr/uploads/images/gallery/2024-12/image.png)
+![image.png](_assets/583e4411f011.png)
 
 When creating a CloudFormation stack, enter this URL and create the stack.
 
-[![image.png](./_images/Whlimage.png)](https://www.aws-ps-tech.kr/uploads/images/gallery/2024-12/Whlimage.png)
+![image.png](_assets/e70aab1231aa.png)
 
 4\. Proceed with entering information to create a stack.
 
 Type an name for the stack.
 
-[![image.png](./_images/JI3image.png)](https://www.aws-ps-tech.kr/uploads/images/gallery/2024-12/JI3image.png)
+![image.png](_assets/596a8f9ac322.png)
 
 Select a VPC. Select one subnet within the same VPC. For this exercise, select public.
 
-![Untitled 2.png](./_images/Yhguntitled-2.png)
+![Untitled 2.png](_assets/0dc88ad1ab19.png)
 
 Let's set it up to create additional buckets as needed.
 
@@ -115,23 +115,23 @@ Enter the name of the existing bucket where the `quickstart-hail` folder was upl
 
 Here, the bucket name `awsimd-us-east-1` was used, and the `Hail S3 bucket name` and `Sagemaker home directory S3 bucket name` were suffixed with `-s3` and `-sm`, respectively. Modify the bucket names as appropriate.
 
-![Untitled 3.png](./_images/kRNuntitled-3.png)
+![Untitled 3.png](_assets/c6dcc8575dbf.png)
 
-![Untitled 4.png](./_images/Gn9untitled-4.png)
+![Untitled 4.png](_assets/bcff25c8a1d8.png)
 
 5\. Finally, press the **`Next`** button to create the stack.
 
-![Untitled 5.png](./_images/el0untitled-5.png)
+![Untitled 5.png](_assets/bf68847f0756.png)
 
-![Untitled 6.png](./_images/SZ9untitled-6.png)
+![Untitled 6.png](_assets/1b2efd77f23e.png)
 
 6\. Check stack creation in CloudFormation.
 
-![Untitled 7.png](./_images/Y8muntitled-7.png)
+![Untitled 7.png](_assets/7e07996c5b08.png)
 
 If the following portfolio appears in the output along with the **`CREATE_COMPLETE`** message in the top stack, you can confirm that it was executed correctly.
 
-![Untitled 8.png](./_images/ejCuntitled-8.png)
+![Untitled 8.png](_assets/0c8c5731c114.png)
 
 # Create an AMI for Hail and VEP
 
@@ -139,9 +139,9 @@ If the following portfolio appears in the output along with the **`CREATE_COMPLE
 
 For VEP, you can pre-download the data and store it in the bucket created or specified through the stack (using the `bucketHail` value from CloudFormation's Outputs).
 
-[![image.png](./_images/jY3image.png)](https://www.aws-ps-tech.kr/uploads/images/gallery/2024-12/jY3image.png)
+![image.png](_assets/6dc884ff0ea7.png)
 
-![Untitled 10.png](./_images/eELuntitled-10.png)
+![Untitled 10.png](_assets/25a5221eec1c.png)
 
 Download VEP data using the wget command:
 
@@ -157,18 +157,17 @@ aws s3 cp homo_sapiens_vep_112_GRCh37.tar.gz s3://{defined Hail S3 bucket}/vep/c
 
 ## AMI Build  
 
-
 1\. Access the [CodeBuild console ](https://us-east-1.console.aws.amazon.com/codesuite/codebuild/projects?region=us-east-1)and initiate the build process for each new AMI. Select Start build &gt; Start with overrides.
 
-[![image.png](./_images/t6qimage.png)](https://www.aws-ps-tech.kr/uploads/images/gallery/2024-12/t6qimage.png)
+![image.png](_assets/955af58fa83a.png)
 
-[![image.png](./_images/zwjimage.png)](https://www.aws-ps-tech.kr/uploads/images/gallery/2024-12/zwjimage.png)
+![image.png](_assets/50eda629404e.png)
 
 2\. In the Environment section, expand Additional configuration and input the required values.
 
-[![image.png](./_images/Nz5image.png)](https://www.aws-ps-tech.kr/uploads/images/gallery/2024-12/Nz5image.png)
+![image.png](_assets/ead47698c0de.png)
 
-[![image.png](./_images/6rnimage.png)](https://www.aws-ps-tech.kr/uploads/images/gallery/2024-12/6rnimage.png)
+![image.png](_assets/a00d8d483f81.png)
 
 <table id="bkmrk-hail_version-0.2.105" style="width: 26.4286%; height: 89.4px;"><thead><tr style="height: 29.8px;"><th style="width: 70.0901%; height: 29.8px;">HAIL\_VERSION</th><th style="width: 29.2492%; height: 29.8px;">0.2.105</th></tr></thead><tbody><tr style="height: 29.8px;"><td style="width: 70.0901%; height: 29.8px;">HTSLIB\_VERSION</td><td style="width: 29.2492%; height: 29.8px;">1.20</td></tr><tr style="height: 29.8px;"><td style="width: 70.0901%; height: 29.8px;">SAMTOOLS\_VERSION</td><td style="width: 29.2492%; height: 29.8px;">1.20</td></tr></tbody></table>
 
@@ -176,91 +175,90 @@ aws s3 cp homo_sapiens_vep_112_GRCh37.tar.gz s3://{defined Hail S3 bucket}/vep/c
 
 <table id="bkmrk-hail_version-0.2.105-1"><thead><tr><th>HAIL\_VERSION</th><th>0.2.105</th></tr></thead><tbody><tr><td>HTSLIB\_VERSION</td><td>1.20</td></tr><tr><td>SAMTOOLS\_VERSION</td><td>1.20</td></tr><tr><td>VEP\_VERSION</td><td>107</td></tr><tr><td>**RODA\_BUCKET**</td><td>**value for the `BucketHail` key in CloudFormation Outputs** </td></tr></tbody></table>
 
-[![image.png](./_images/rYGimage.png)](https://www.aws-ps-tech.kr/uploads/images/gallery/2024-12/rYGimage.png)
+![image.png](_assets/65b5678c7832.png)
 
 3\. Check the build status in CodeBuild
 
 **Hail (without VEP):** The Hail image build completes in about 20 minutes.
 
-[![image.png](./_images/9Wlimage.png)](https://www.aws-ps-tech.kr/uploads/images/gallery/2024-12/9Wlimage.png)
+![image.png](_assets/dea6aab2a258.png)
 
-[![image.png](./_images/VdYimage.png)](https://www.aws-ps-tech.kr/uploads/images/gallery/2024-12/VdYimage.png)
+![image.png](_assets/2dc14d26e6aa.png)
 
 **Hail (VEP)**: The VEP version build takes approximately 1 hour and 38 minutes to complete.
 
-![Screenshot_2024-06-24_at_9.31.00_AM.png](./_images/I3Cscreenshot-2024-06-24-at-9-31-00-am.png)
+![Screenshot_2024-06-24_at_9.31.00_AM.png](_assets/514955e45708.png)
 
-![Screenshot_2024-06-24_at_9.31.12_AM.png](./_images/KxIscreenshot-2024-06-24-at-9-31-12-am.png)
+![Screenshot_2024-06-24_at_9.31.12_AM.png](_assets/5b55aa9e02c4.png)
 
 You can find the \*\*AMI results\*\* in either the AMI menu of [Amazon EC2 console](https://console.aws.amazon.com/ec2/) or CodeBuild logs.
 
-[![image.png](./_images/IgJimage.png)](https://www.aws-ps-tech.kr/uploads/images/gallery/2024-12/IgJimage.png)
+![image.png](_assets/3ecd6fecca10.png)
 
-# **EMR Cluster Setup and Jupyter Environment Configuration**
-
+# EMR Cluster Setup and Jupyter Environment Configuration
 ## EMR Cluster Setup
 
 1\. In the CloudFormation service console's Outputs tab, click the portfolio.
 
-[![image.png](./_images/9emimage.png)](https://www.aws-ps-tech.kr/uploads/images/gallery/2024-12/9emimage.png)
+![image.png](_assets/e1afa7ced9a5.png)
 
 2\. In the portfolio of AWS Service Catalog, locate the relevant Product, click the Access tab, then select Grant access.
 
-[![image.png](./_images/qjKimage.png)](https://www.aws-ps-tech.kr/uploads/images/gallery/2024-12/qjKimage.png)
+![image.png](_assets/4925f73e33aa.png)
 
 3\. Add permissions. Check the user that suits you and grant them access to Hail Products. Search for it, select it, and click Grant access.
 
-[![image.png](./_images/A2zimage.png)](https://www.aws-ps-tech.kr/uploads/images/gallery/2024-12/A2zimage.png)
+![image.png](_assets/64321487e655.png)
 
-[![image.png](./_images/0lWimage.png)](https://www.aws-ps-tech.kr/uploads/images/gallery/2024-12/0lWimage.png)
+![image.png](_assets/74d1d6099a0a.png)
 
 4\. After confirming access permissions, navigate to the Product in the Provisioning menu.
 
-[![image.png](./_images/UvRimage.png)](https://www.aws-ps-tech.kr/uploads/images/gallery/2024-12/UvRimage.png)
+![image.png](_assets/df376551920c.png)
 
 5\. With permissions granted, you should now see 2 Products listed.
 
-[![image.png](./_images/ZYiimage.png)](https://www.aws-ps-tech.kr/uploads/images/gallery/2024-12/ZYiimage.png)
+![image.png](_assets/106e3088f7d0.png)
 
 6\. Select the Hail EMR Cluster product and click Launch product.
 
-![Untitled 19.png](./_images/MLountitled-19.png)
+![Untitled 19.png](_assets/91d0d423e216.png)
 
 7\. Enter the required launch information.
 
 Either enter a name manually or click Generate name.
 
-![Untitled 20.png](./_images/ubMuntitled-20.png)
+![Untitled 20.png](_assets/5bb2224ec90f.png)
 
 Specify the Hail AMI you created earlier. You can find the AMI ID in the EC2 service's AMIs section (as previously described).
 
-![Untitled 21.png](./_images/jHsuntitled-21.png)
+![Untitled 21.png](_assets/c4e20a132934.png)
 
 Input the Cluster name and Hail AMI ID. You can leave all other settings at their default values.
 
-![Untitled 22.png](./_images/sEGuntitled-22.png)
+![Untitled 22.png](_assets/dda31c4d6cf7.png)
 
 8\. Click Launch product at the bottom of the page.
 
-![Screenshot_2024-07-08_at_11.47.56_AM.png](./_images/nz9screenshot-2024-07-08-at-11-47-56-am.png)
+![Screenshot_2024-07-08_at_11.47.56_AM.png](_assets/27f11cc66283.png)
 
 ## SageMaker Notebook Setup
 
 1\. Similarly, select Launch product in the Product menu.
 
-[![image.png](./_images/p2Eimage.png)](https://www.aws-ps-tech.kr/uploads/images/gallery/2024-12/p2Eimage.png)
+![image.png](_assets/5ef3d434198a.png)
 
 2\. Provide a name for your Hail notebook instance. Keep all other settings at their defaults.
 
-![Untitled 24.png](./_images/Ro2untitled-24.png)
+![Untitled 24.png](_assets/f686f828c062.png)
 
 3\. Click Launch product at the bottom of the page.
 
-![Screenshot_2024-07-08_at_11.47.56_AM.png](./_images/PcJscreenshot-2024-07-08-at-11-47-56-am.png)
+![Screenshot_2024-07-08_at_11.47.56_AM.png](_assets/88168ff02a88.png)
 
 *\*Note: You can monitor the product deployment progress through CloudFormation.*
 
-[![image.png](./_images/CrLimage.png)](https://www.aws-ps-tech.kr/uploads/images/gallery/2024-12/CrLimage.png)
+![image.png](_assets/804e1257a263.png)
 
 ## numpy reinstall
 
@@ -268,11 +266,11 @@ Input the Cluster name and Hail AMI ID. You can leave all other settings at thei
 
 Therefore, it is necessary to check the cluster created by Amazon EMR as shown below, connect to the Primary instance, delete and reinstall the numpy module.
 
-[![image.png](./_images/image.png)](https://www.aws-ps-tech.kr/uploads/images/gallery/2025-03/image.png)
+![image.png](_assets/d754db922211.png)
 
-[![image.png](./_images/sxXimage.png)](https://www.aws-ps-tech.kr/uploads/images/gallery/2025-03/sxXimage.png)[![image.png](./_images/xd0image.png)](https://www.aws-ps-tech.kr/uploads/images/gallery/2025-03/xd0image.png)
+![image.png](_assets/6415cf12eab7.png)![image.png](_assets/8c196ce37b1a.png)
 
-[![image.png](./_images/opximage.png)](https://www.aws-ps-tech.kr/uploads/images/gallery/2025-03/opximage.png)
+![image.png](_assets/84471f8a13f1.png)
 
 ```
 sudo python3 -m pip uninstall -y numpy
@@ -284,32 +282,32 @@ sudo python3 -m pip install  numpy -U
 
 1\. Launch your notebook. Find the URL in CloudFormation's Outputs tab. Clicking it will automatically connect you to your notebook instance in Amazon SageMaker.
 
-![Untitled 26.png](./_images/8BOuntitled-26.png)
+![Untitled 26.png](_assets/9e4f5c42b4d6.png)
 
 2\. Select Open JupyterLab to start the notebook interface.
 
-![Untitled 27.png](./_images/XaHuntitled-27.png)
+![Untitled 27.png](_assets/c990d3ef0a2f.png)
 
 3\. We'll work with two notebooks in this practice session:
 
 - common-notebooks/plotting-tutorail.ipynb
 - common-notebooks/GWAS-tutorial.ipynb
 
-![Screenshot_2024-06-24_at_3.26.55_PM.png](./_images/G4vscreenshot-2024-06-24-at-3-26-55-pm.png)
+![Screenshot_2024-06-24_at_3.26.55_PM.png](_assets/175ef1fcd765.png)
 
 Locate your previously created EMR cluster and update the Cluster Name in the second cell.
 
 You can execute notebook cells in sequence by placing your cursor in the cell where you want to begin.
 
-![Untitled 28.png](./_images/S5uuntitled-28.png)
+![Untitled 28.png](_assets/c6da27e3ad0a.png)
 
 When the tutorial code runs successfully, you should see results similar to these:
 
-![Screenshot_2024-07-08_at_12.21.50_PM.png](./_images/Eevscreenshot-2024-07-08-at-12-21-50-pm.png)
+![Screenshot_2024-07-08_at_12.21.50_PM.png](_assets/a1c882b5290a.png)
 
-![Untitled 29.png](./_images/QUfuntitled-29.png)
+![Untitled 29.png](_assets/45997ba5aea7.png)
 
-![Screenshot_2024-07-08_at_12.22.18_PM.png](./_images/mCzscreenshot-2024-07-08-at-12-22-18-pm.png)
+![Screenshot_2024-07-08_at_12.22.18_PM.png](_assets/c38238fe47df.png)
 
 # Additional Information
 
@@ -317,7 +315,7 @@ When the tutorial code runs successfully, you should see results similar to thes
 
 In the S3 bucket, select the json file object and click Copy S3 URI.
 
-![Untitled 30.png](./_images/untitled-30.png)
+![Untitled 30.png](_assets/19254270f2d5.png)
 
 Ex: vep-configuration-GRCh37.json
 
@@ -348,7 +346,7 @@ Ex: vep-configuration-GRCh37.json
 
 You can modify and implement the following content in the **[vep-tutorial](https://github.com/hmkim/quickstart-hail/blob/main/sagemaker/common-notebooks/vep-tutorial.ipynb)** code using the S3 object URI you copied above.
 
-![Screenshot_2024-07-11_at_11.07.00_AM.png](./_images/screenshot-2024-07-11-at-11-07-00-am.png)
+![Screenshot_2024-07-11_at_11.07.00_AM.png](_assets/f5d4b7bc5dca.png)
 
 ## VEP Plugin Installation
 
@@ -356,13 +354,11 @@ If you need to modify VEP plugin installations (additions, etc.), you'll need to
 
 For customizing Hail, VEP tool installation, and AMI building, refer to these resources:
 
-
 - [Hail AMI Creation via AWS CodeBuild](https://github.com/hmkim/quickstart-hail/blob/main/docs/hail-ami.md)
 - [vep-install.md](https://github.com/hmkim/quickstart-hail/blob/main/docs/vep-install.md)
 - [Building a Custom Hail AMI](https://github.com/hmkim/quickstart-hail/blob/main/docs/ami-creation.md)
 
 ## Dynamically Expanding EMR Cluster EBS (HDFS) Volume  
-
 
 When working with large datasets, you may find the initially configured cluster volume capacity insufficient. You can dynamically expand the EBS volume by following the guidance in this blog post:
 

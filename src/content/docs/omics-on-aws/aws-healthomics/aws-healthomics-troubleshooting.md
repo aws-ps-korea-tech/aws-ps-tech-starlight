@@ -1,8 +1,8 @@
 ---
 title: "AWS HealthOmics - Troubleshooting"
-sidebar:
-  order: 8
 ---
+
+# AWS HealthOmics - Troubleshooting
 
 공식문서
 
@@ -18,18 +18,18 @@ sidebar:
 
 [참고 코드](https://github.com/nf-core/scrnaseq/blob/4171377f40d629d43d4ca71654a7ea06e5619a09/modules/nf-core/fastqc/main.nf#L8)
 
-[![Screenshot 2024-08-20 at 4.36.28 PM.png](./_images/screenshot-2024-08-20-at-4-36-28-pm.png)](https://www.aws-ps-tech.kr/uploads/images/gallery/2024-08/screenshot-2024-08-20-at-4-36-28-pm.png)
+![Screenshot 2024-08-20 at 4.36.28 PM.png](_assets/0169a902dcf5.png)
 
 {account\_id}.dkr.ecr.us-east-1.amazonaws.com/**quay/quay.io**/biocontainers/bioconductor-dropletutils:1.18.0--r42hf17093f\_1
 
 [참고 코드](https://github.com/nf-core/scrnaseq/blob/4171377f40d629d43d4ca71654a7ea06e5619a09/modules/local/emptydrops.nf#L5)
 
-[![Screenshot 2024-08-20 at 4.36.12 PM.png](./_images/screenshot-2024-08-20-at-4-36-12-pm.png)](https://www.aws-ps-tech.kr/uploads/images/gallery/2024-08/screenshot-2024-08-20-at-4-36-12-pm.png)
+![Screenshot 2024-08-20 at 4.36.12 PM.png](_assets/c7c69b4afd24.png)
 
 따라서 scrnaseq/conf/omics.config 파일을 수정을 필요로함.
 
-[![Screenshot 2024-08-20 at 4.39.14 PM.png](./_images/screenshot-2024-08-20-at-4-39-14-pm.png)](https://www.aws-ps-tech.kr/uploads/images/gallery/2024-08/screenshot-2024-08-20-at-4-39-14-pm.png)
+![Screenshot 2024-08-20 at 4.39.14 PM.png](_assets/669a96da2d30.png)
 
 to
 
-[![Screenshot 2024-08-20 at 4.39.05 PM.png](./_images/screenshot-2024-08-20-at-4-39-05-pm.png)](https://www.aws-ps-tech.kr/uploads/images/gallery/2024-08/screenshot-2024-08-20-at-4-39-05-pm.png)
+![Screenshot 2024-08-20 at 4.39.05 PM.png](_assets/eac2f430abfd.png)

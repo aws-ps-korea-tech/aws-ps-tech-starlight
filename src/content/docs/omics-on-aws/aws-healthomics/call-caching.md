@@ -1,8 +1,8 @@
 ---
 title: "Call Caching"
-sidebar:
-  order: 11
 ---
+
+# Call Caching
 
 https://aws.amazon.com/blogs/industries/accelerate-development-of-bioinformatics-workflows-on-aws-healthomics-using-call-caching/
 
