@@ -1,0 +1,23 @@
+---
+import Default from '@astrojs/starlight/components/Footer.astro';
+---
+
+<Default><slot /></Default>
+
+<div class="ps-footer-links" data-pagefind-ignore>
+  <a href="https://aws.amazon.com/ko/privacy/" target="_blank" rel="noopener">Privacy Policy</a>
+</div>
+
+<style>
+  .ps-footer-links {
+    margin-top: 1.5rem;
+    text-align: center;
+    font-size: var(--sl-text-sm);
+  }
+  .ps-footer-links a {
+    color: var(--sl-color-gray-3);
+  }
+  .ps-footer-links a:hover {
+    color: var(--sl-color-text-accent);
+  }
+</style>
