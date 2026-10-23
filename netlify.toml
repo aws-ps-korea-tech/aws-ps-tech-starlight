@@ -1,0 +1,11 @@
+# Netlify deploy config — Starlight (Astro)
+# Serves at root (no base path) so public/_redirects gives REAL 301s.
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"
+  # DEPLOY_BASE unset => base '/' (root). DEPLOY_SITE optional.
+
+# public/_redirects (108 rules, 301) is picked up automatically by Netlify.
