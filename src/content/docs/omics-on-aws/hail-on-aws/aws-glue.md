@@ -1,8 +1,8 @@
 ---
 title: "AWS Glue"
-sidebar:
-  order: 1
 ---
+
+# AWS Glue
 
 여기서는 Hail을 VCF to Parquet 목적으로 사용하는 법을 설명합니다.
 
@@ -74,7 +74,6 @@ IAM 서비스로 진입하여 정의된 Role 을 수정합니다. `GenomicsAnaly
 {
     "--conf": "spark.serializer=org.apache.spark.serializer.KryoSerializer --conf spark.kryo.registrator=is.hail.kryo.HailKryoRegistrator"
 }
-
 
 ```
 

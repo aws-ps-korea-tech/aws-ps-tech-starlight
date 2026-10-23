@@ -1,0 +1,58 @@
+[
+  {
+    "book": "Amazon S3",
+    "path": "s3/amazon-s3"
+  },
+  {
+    "book": "대학 고객을 위한 AWS 길라잡이",
+    "path": "aws"
+  },
+  {
+    "book": "Omics on AWS",
+    "path": "omics-on-aws"
+  },
+  {
+    "book": "Data Transfer",
+    "path": "data-transfer"
+  },
+  {
+    "book": "FSx for Lustre",
+    "path": "fsx-for-lustre"
+  },
+  {
+    "book": "AWS Batch",
+    "path": "aws-batch"
+  },
+  {
+    "book": "eGovFramework on AWS",
+    "path": "egovframework-on-aws"
+  },
+  {
+    "book": "AWS BLAST Performance Testing",
+    "path": "aws-blast-performance-testing"
+  },
+  {
+    "book": "AI Agent Memory on AWS",
+    "path": "ai-agent-memory-on-aws"
+  },
+  {
+    "book": "Decision Models on AWS",
+    "path": "decision-models-on-aws"
+  },
+  {
+    "book": "Genome Data Delivery Portal on AWS",
+    "path": "genome-data-delivery-portal-on-aws"
+  },
+  {
+    "book": "NCBI BLAST on AWS",
+    "path": "ncbi-blast-on-aws"
+  },
+  {
+    "book": "Amazon Bio Discovery로 AI 항체 설계 시작하기",
+    "path": "amazon-bio-discovery-ai"
+  },
+  {
+    "book": "[DRAFT] gbrain 검색 파이프라인 이해하기",
+    "path": "draft-gbrain"
+  }
+]

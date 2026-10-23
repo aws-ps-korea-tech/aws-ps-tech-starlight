@@ -1,11 +1,10 @@
 ---
 title: "Quickstart Hail (Korean)"
-sidebar:
-  order: 3
 ---
 
-# 스택 준비  
+# Quickstart Hail (Korean)
 
+# 스택 준비  
 
 1. AWS CLI credential을 준비하고 터미널에서 적용합니다.
 
@@ -20,7 +19,7 @@ export AWS_SESSION_TOKEN="{SESSION_TOKEN}"
 
 **이때 버킷이름은 자신의 이니셜을 사용해 만듭니다. 이미 동일한 버킷이 존재할 경우 생성할 수 없습니다.**
 
-![2024-07-08_00-47-27 1.png](./_images/Kr02024-07-08-00-47-27-1.png)
+![2024-07-08_00-47-27 1.png](_assets/b548968d51cd.png)
 
 ```
 aws s3 mb s3://{버킷이름}-{리전}
@@ -39,59 +38,59 @@ aws s3 sync . s3://$AWS_BUCKET/quickstart-hail/ --exclude ".git/*"
 
 3. [Amazon S3 콘솔](https://us-east-1.console.aws.amazon.com/s3/home?region=us-east-1)로 접속하여 버킷 및 디렉토리를확인합니다.
 
-![2024-07-08_00-53-25.png](./_images/VsQ2024-07-08-00-53-25.png)
+![2024-07-08_00-53-25.png](_assets/603566d78ed9.png)
 
 # 스택 실행
 
 1. [CloudFormation 콘솔](https://us-east-1.console.aws.amazon.com/cloudformation/home?region=us-east-1)로 진입합니다.
 
-![Screenshot_2024-06-21_at_10.26.55_PM.png](./_images/wADscreenshot-2024-06-21-at-10-26-55-pm.png)
+![Screenshot_2024-06-21_at_10.26.55_PM.png](_assets/4c96ca495d1d.png)
 
 2. 새로운 스택을 생성합니다. 이때 With new resources (standard)로 선택합니다.
 
-![Screenshot_2024-06-21_at_10.27.22_PM.png](./_images/M7Hscreenshot-2024-06-21-at-10-27-22-pm.png)
+![Screenshot_2024-06-21_at_10.27.22_PM.png](_assets/8ac7a33340d7.png)
 
 3. Amazon S3 콘솔로 접속하여 앞에서 업로드한 template 디렉토리 내의 hail-launcher.template.yaml을 선택하고 Copy URL을 클릭합니다. 경로는 다음과 같습니다.
 
 **{본인이만든버킷명} &gt; quickstart-hail &gt; templates &gt; hail-launcher.template.yaml**
 
-![2024-07-08_00-55-27.png](./_images/Nx42024-07-08-00-55-27.png)
+![2024-07-08_00-55-27.png](_assets/c7ccfadd5843.png)
 
 이 주소를 CloudFormation 스택 생성시 템플릿 주소로 입력하고 스택을 만듭니다.
 
-![Untitled.png](./_images/k6tuntitled.png)
+![Untitled.png](_assets/112e4fcde040.png)
 
 4. Hail 스택을 만들기 위한 정보 입력을 진행합니다.
 
 Stack 이름을 임의로 입력합니다.
 
-![Untitled 1.png](./_images/zTtuntitled-1.png)
+![Untitled 1.png](_assets/539606a22166.png)
 
 VPC를 선택합니다. 같은 VPC내 Subnet을 하나 선택합니다. 이 실습에서는 public으로 선택합니다.
 
-![Untitled 2.png](./_images/Yhguntitled-2.png)
+![Untitled 2.png](_assets/0dc88ad1ab19.png)
 
 필요한 버킷들을 추가로 만들도록 설정해봅니다.
 
 quickstart-hail 폴더를 업로드한 기존의 버킷명도 입력하고 리전도 확인합니다.
 
-![Untitled 3.png](./_images/kRNuntitled-3.png)
+![Untitled 3.png](_assets/c6dcc8575dbf.png)
 
-![Untitled 4.png](./_images/Gn9untitled-4.png)
+![Untitled 4.png](_assets/bcff25c8a1d8.png)
 
 5. 최종적으로 스택을 생성합니다.
 
-![Untitled 5.png](./_images/el0untitled-5.png)
+![Untitled 5.png](_assets/bf68847f0756.png)
 
-![Untitled 6.png](./_images/SZ9untitled-6.png)
+![Untitled 6.png](_assets/1b2efd77f23e.png)
 
 6. CloudFormation 내에서 스택 생성을 확인합니다.
 
-![Untitled 7.png](./_images/Y8muntitled-7.png)
+![Untitled 7.png](_assets/7e07996c5b08.png)
 
 최상위 스택에서 `CREATE_COMPLETE` 메세지와 함께 아래와 같이 portfolio가 출력에 나왔다 면 정상 실행되었음을 확인할 수 있습니다.
 
-![Untitled 8.png](./_images/ejCuntitled-8.png)
+![Untitled 8.png](_assets/0c8c5731c114.png)
 
 # Hail 및 VEP를 위한 AMI 생성
 
@@ -99,9 +98,9 @@ quickstart-hail 폴더를 업로드한 기존의 버킷명도 입력하고 리�
 
 VEP의 경우 미리 다운로드하여 앞에서 스택을 통해 생성 또는 입력한 버킷 (여기서는 CloudFormation의 Outputs 중 bucketHail 값을 사용했습니다.)에 위치시켜 놓을 수 있습니다.
 
-![Untitled 9.png](./_images/Xgnuntitled-9.png)
+![Untitled 9.png](_assets/3251b82dfcf7.png)
 
-![Untitled 10.png](./_images/eELuntitled-10.png)
+![Untitled 10.png](_assets/25a5221eec1c.png)
 
 wget 명령어를 사용한 VEP 데이터 다운로드
 
@@ -117,19 +116,19 @@ aws s3 cp homo_sapiens_vep_112_GRCh37.tar.gz s3://{버킷명}/vep/cache/
 
 ```
 
-![Unknown.png](./_images/38Runknown.png)
+![Unknown.png](_assets/f38808998789.png)
 
 ## AMI 빌드
 
 1. [CodeBuild 콘솔](https://us-east-1.console.aws.amazon.com/codesuite/codebuild/projects?region=us-east-1)로 진입하여 각각 새로운 AMI 빌드를 시도합니다. Start build &gt; Start with overrides를 선택합니다.
 
-![Untitled 11.png](./_images/Bp0untitled-11.png)
+![Untitled 11.png](_assets/51efe26da7bb.png)
 
 2. Environment 섹션의 Additional configuration 을 확장해서 필요한 값을 입력합니다.
 
-![Untitled 12.png](./_images/jmvuntitled-12.png)
+![Untitled 12.png](_assets/14e05ece0315.png)
 
-![Untitled 13.png](./_images/aqWuntitled-13.png)
+![Untitled 13.png](_assets/8964d81c6012.png)
 
 <table id="bkmrk-hail_version-0.2.105"><thead><tr><th>HAIL\_VERSION</th><th>0.2.105</th></tr></thead><tbody><tr><td>HTSLIB\_VERSION</td><td>1.20</td></tr><tr><td>SAMTOOLS\_VERSION</td><td>1.20</td></tr></tbody></table>
 
@@ -137,126 +136,125 @@ aws s3 cp homo_sapiens_vep_112_GRCh37.tar.gz s3://{버킷명}/vep/cache/
     
     <table><thead><tr><th>HAIL\_VERSION</th><th>0.2.105</th></tr></thead><tbody><tr><td>HTSLIB\_VERSION</td><td>1.20</td></tr><tr><td>SAMTOOLS\_VERSION</td><td>1.20</td></tr><tr><td>VEP\_VERSION</td><td> </td></tr><tr><td>RODA\_BUCKET</td><td>&lt;VEP 다운로드 받은 버킷명&gt;</td></tr></tbody></table>
     
-    ![Unknown 1.png](./_images/tIXunknown-1.png)
+    ![Unknown 1.png](_assets/271eec5d1d5c.png)
     
     VEP 버전의 hail빌드시 약 1시간 38분 소요
     
-    ![Screenshot_2024-06-24_at_9.31.00_AM.png](./_images/I3Cscreenshot-2024-06-24-at-9-31-00-am.png)
+    ![Screenshot_2024-06-24_at_9.31.00_AM.png](_assets/514955e45708.png)
 
 빌드 후 약 20분이 지나면 hail 이미지 빌드가 완료된 것을 확인할 수 있었습니다.
 
-![Screenshot_2024-06-24_at_9.31.12_AM.png](./_images/KxIscreenshot-2024-06-24-at-9-31-12-am.png)
+![Screenshot_2024-06-24_at_9.31.12_AM.png](_assets/5b55aa9e02c4.png)
 
 **또한 AMI 결과는** [AMI 메뉴](https://us-east-1.console.aws.amazon.com/ec2/home?region=us-east-1#Images:) 또는 CodeBuild 로그에서 확인 가능합니다.
 
-![Screenshot_2024-06-22_at_8.52.43_PM.png](./_images/AhQscreenshot-2024-06-22-at-8-52-43-pm.png)
+![Screenshot_2024-06-22_at_8.52.43_PM.png](_assets/4b4d7530aa87.png)
 
 또는
 
-![Screenshot_2024-06-18_at_5.35.01_PM.png](./_images/QWyscreenshot-2024-06-18-at-5-35-01-pm.png)
+![Screenshot_2024-06-18_at_5.35.01_PM.png](_assets/a3b577043cdf.png)
 
-![Screenshot_2024-06-18_at_5.35.18_PM.png](./_images/3K7screenshot-2024-06-18-at-5-35-18-pm.png)
+![Screenshot_2024-06-18_at_5.35.18_PM.png](_assets/fd3a8a3bff2d.png)
 
-![Screenshot_2024-06-18_at_1.47.18_PM.png](./_images/19Yscreenshot-2024-06-18-at-1-47-18-pm.png)
+![Screenshot_2024-06-18_at_1.47.18_PM.png](_assets/d9da85b069c6.png)
 
-![Screenshot_2024-06-18_at_1.50.45_PM.png](./_images/zBJscreenshot-2024-06-18-at-1-50-45-pm.png)
+![Screenshot_2024-06-18_at_1.50.45_PM.png](_assets/eeac3fa6571c.png)
 
-# **EMR 클러스터 실행 및 Jupyter 환경 세팅**
-
+# EMR 클러스터 실행 및 Jupyter 환경 세팅
 ## EMR 클러스터 실행
 
 1. CloudFormation 서비스 콘솔에서 스택 Outputs 탭의 portfolio 에 있는 링크를 클릭합니다.
 
-![Untitled 14.png](./_images/iT2untitled-14.png)
+![Untitled 14.png](_assets/c10012a6daf9.png)
 
 2. 포트폴리오내 해당 Product에 대한 Access 탭을 클릭한 뒤 Grant access 를 클릭합니다.
 
-![Untitled 15.png](./_images/xE7untitled-15.png)
+![Untitled 15.png](_assets/73e82cad342a.png)
 
 3. 권한 추가를 합니다. 여기서는 실습 계정 역할 이름이 `WSParticipantRole` 입니다. 검색후 체크하고 Grant access를 클릭합니다.
 
-![Untitled 16.png](./_images/EQzuntitled-16.png)
+![Untitled 16.png](_assets/d46599f266ee.png)
 
 4. Access 권한이 있음을 확인한 뒤 Provisioning 메뉴의 Product를 클릭하여 진입합니다.
 
-![Untitled 17.png](./_images/r8nuntitled-17.png)
+![Untitled 17.png](_assets/43f5bfb7f585.png)
 
 5. 이제 권한이 있으므로 Products 항목에서 2개의 Product들을 볼 수 있게 되었습니다.
 
-![Untitled 18.png](./_images/Pt7untitled-18.png)
+![Untitled 18.png](_assets/8844168b6719.png)
 
 6. Product에 있는 Hail EMR Cluster메뉴로 진입하여 원하는 product를 선택하고 Launch product를 클릭합니다.
 
-![Untitled 19.png](./_images/MLountitled-19.png)
+![Untitled 19.png](_assets/91d0d423e216.png)
 
 7. Launch에 필요한 정보들을 기입합니다.
 
 이름을 직접 입력하거나 Generate name을 클릭합니다.
 
-![Untitled 20.png](./_images/ubMuntitled-20.png)
+![Untitled 20.png](_assets/5bb2224ec90f.png)
 
 앞에서 만든 Hail AMI를 입력합니다. 이때 AMI ID는 AMI 메뉴에서 EC2 서비스 하위의 AMIs 항목에서 찾을 수 있습니다. (앞에서도 설명했던)
 
-![Untitled 21.png](./_images/jHsuntitled-21.png)
+![Untitled 21.png](_assets/c4e20a132934.png)
 
 Cluster name을 입력하고 Hail AMI에 AMI ID를 입력한 뒤 다른 것은 모두 기본값을 사용할 수 있습니다.
 
-![Untitled 22.png](./_images/sEGuntitled-22.png)
+![Untitled 22.png](_assets/dda31c4d6cf7.png)
 
 8. 맨 아래의 Launch product를 클릭합니다.
 
-![Screenshot_2024-07-08_at_11.47.56_AM.png](./_images/nz9screenshot-2024-07-08-at-11-47-56-am.png)
+![Screenshot_2024-07-08_at_11.47.56_AM.png](_assets/27f11cc66283.png)
 
 ## SageMaker Notebook 실행
 
 1. Product 메뉴에서 마찬가지로 Launch product를 클릭합니다.
 
-![Untitled 23.png](./_images/frPuntitled-23.png)
+![Untitled 23.png](_assets/bb7dda45b2b7.png)
 
 2. Hail notebook을 위한 인스턴스의 이름을 입력하고 나머지는 모두 기본값입니다.
 
-![Untitled 24.png](./_images/Ro2untitled-24.png)
+![Untitled 24.png](_assets/f686f828c062.png)
 
 3. 맨 아래의 Launch product를 클릭합니다.
 
-![Screenshot_2024-07-08_at_11.47.56_AM.png](./_images/PcJscreenshot-2024-07-08-at-11-47-56-am.png)
+![Screenshot_2024-07-08_at_11.47.56_AM.png](_assets/88168ff02a88.png)
 
 *참고로 제품(Product)의 실행 과정은 CloudFormation을 통해서도 확인할 수 있습니다.*
 
-![Untitled 25.png](./_images/ny2untitled-25.png)
+![Untitled 25.png](_assets/4270932912f5.png)
 
-![Screenshot_2024-07-08_at_12.08.40_PM.png](./_images/pw3screenshot-2024-07-08-at-12-08-40-pm.png)
+![Screenshot_2024-07-08_at_12.08.40_PM.png](_assets/9b97a56a6757.png)
 
 # GWAS 실습 (Hail)
 
 1. 노트북을 실행합니다. 이 때 CloudFormation의 Outputs탭에서 url을 확인할 수 있습니다. 클릭하면 Amazon SageMaker의 해당 노트북 인스턴스로 자동 연결됩니다.
 
-![Untitled 26.png](./_images/8BOuntitled-26.png)
+![Untitled 26.png](_assets/9e4f5c42b4d6.png)
 
 2. Open JupyterLab을 클릭하여 노트북을 실행합니다.
 
-![Untitled 27.png](./_images/XaHuntitled-27.png)
+![Untitled 27.png](_assets/c990d3ef0a2f.png)
 
 3. 이제 노트북에서 각각 2개의 노트북을 가지고 실습해봅니다.
 
 - common-notebooks/plotting-tutorail.ipynb
 - common-notebooks/GWAS-tutorial.ipynb
 
-![Screenshot_2024-06-24_at_3.26.55_PM.png](./_images/G4vscreenshot-2024-06-24-at-3-26-55-pm.png)
+![Screenshot_2024-06-24_at_3.26.55_PM.png](_assets/175ef1fcd765.png)
 
 앞에서 만든 EMR 클러스터를 조회한 뒤 Cluster Name을 2번째 셀에서 수정해줍니다.
 
 노트북 셀을 한번에 실행하기 위해서 시작하고자 하는 셀에 커서를 놓은 뒤 일괄 실행할 수 있습니다.
 
-![Untitled 28.png](./_images/S5uuntitled-28.png)
+![Untitled 28.png](_assets/c6da27e3ad0a.png)
 
 *최종적으로 튜토리얼로 주어진 코드가 정상적으로 실행할 수 있었다면 아래와 같은 결과들을 확인할 수 있습니다.*
 
-![Screenshot_2024-07-08_at_12.21.50_PM.png](./_images/Eevscreenshot-2024-07-08-at-12-21-50-pm.png)
+![Screenshot_2024-07-08_at_12.21.50_PM.png](_assets/a1c882b5290a.png)
 
-![Untitled 29.png](./_images/QUfuntitled-29.png)
+![Untitled 29.png](_assets/45997ba5aea7.png)
 
-![Screenshot_2024-07-08_at_12.22.18_PM.png](./_images/mCzscreenshot-2024-07-08-at-12-22-18-pm.png)
+![Screenshot_2024-07-08_at_12.22.18_PM.png](_assets/c38238fe47df.png)
 
 # 기타
 
@@ -264,7 +262,7 @@ Cluster name을 입력하고 Hail AMI에 AMI ID를 입력한 뒤 다른 것은 �
 
 S3 버킷에서 해당 json파일 객체를 선택하고 Copy S3 URI를 클릭합니다.
 
-![Untitled 30.png](./_images/untitled-30.png)
+![Untitled 30.png](_assets/19254270f2d5.png)
 
 예시) vep-configuration-GRCh37.json
 
@@ -295,7 +293,7 @@ S3 버킷에서 해당 json파일 객체를 선택하고 Copy S3 URI를 클릭�
 
 [vep-tutorial](https://github.com/hmkim/quickstart-hail/blob/main/sagemaker/common-notebooks/vep-tutorial.ipynb) 코드에서 아래 내용에서 위에서 복사한 S3 객체 URI로 수정하여 사용할 수 있습니다.
 
-![Screenshot_2024-07-11_at_11.07.00_AM.png](./_images/screenshot-2024-07-11-at-11-07-00-am.png)
+![Screenshot_2024-07-11_at_11.07.00_AM.png](_assets/f5d4b7bc5dca.png)
 
 ## VEP 플러그인 설치
 
