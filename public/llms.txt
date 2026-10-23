@@ -1,0 +1,108 @@
+# AWS PS Tech Korea — Docs
+
+> AWS Professional Services Korea 기술 문서. BookStack에서 이관된 정적 문서 모음.
+
+## ai-agent-memory-on-aws
+- [AI 에이전트에게 \"내 기억\"을 달아주기 — GBrain을 AWS에 프라이빗하게 배포하고 노트북에서 쓰는 법](/ai-agent-memory-on-aws/ai-gbrain-aws/)
+
+## amazon-bio-discovery-ai
+- [Amazon Bio Discovery로 AI 항체 설계 시작하기: 생명과학 연구자를 위한 안내](/amazon-bio-discovery-ai/amazon-bio-discovery-ai/)
+- [Getting Started with AI Antibody Design on Amazon Bio Discovery: A Guide for Life Science Researchers](/amazon-bio-discovery-ai/getting-started-with-ai-antibody-design-on-amazon-bio-discovery-a-guide-for-life-science-researchers/)
+
+## aws
+- [AWS 계정 안전하게 지키기](/aws/aws/)
+- [루트 계정 보호하기 - OTP 설정 (필수 영상)](/aws/otp/)
+- [쉽게 따라하는 연구실 계정 관리](/aws/쉽게-따라하는-연구실-계정-관리/)
+- [유용한 링크들 모음](/aws/유용한-링크들-모음/)
+- [AMI로 쉽게 리눅스 머신 셋업하기](/aws/aws-2/ami-gwl/)
+- [공유 AMI로부터 가상 머신 시작하기](/aws/aws-2/ami/)
+- [AWS CLI](/aws/aws-2/aws-cli/)
+- [Cloud9](/aws/aws-2/cloud9/)
+- [EC2로부터 이미지 (AMI) 생성](/aws/aws-2/ec2-ami/)
+- [EC2 종료와 볼륨 스냅샷 저장 (옵션)](/aws/aws-2/ec2/)
+- [Hail on EC2 (옵션)](/aws/aws-2/hail-on-ec2/)
+- [기본 분석 수행하기 (옵션)](/aws/aws-2/기본-분석-수행하기-옵션/)
+- [데이터 다운로드 실습](/aws/aws-2/데이터-다운로드-실습/)
+- [리눅스 머신 실행](/aws/aws-2/리눅스-머신-실행/)
+- [워크샵 시작 전 준비사항](/aws/aws-2/워크샵-시작-전-준비사항/)
+- [저장 장치 추가하기](/aws/aws-2/저장-장치-추가하기/)
+- [Amazon Lightsail for Research](/aws/aws-h9c/amazon-lightsail-for-research/)
+- [Research and Engineering Studio on AWS](/aws/aws-h9c/research-and-engineering-studio-on-aws/)
+- [실습용 윈도우 EC2 인스턴스 자동화](/aws/ec2/ec2-bck/)
+- [Rstudio 실습환경 자동화 구성](/aws/ec2/rstudio/)
+
+## aws-batch
+- [Tagging w/ Nextflow](/aws-batch/tagging-w-nextflow/)
+- [Troubleshooting for AWS Batch & Nextflow](/aws-batch/troubleshooting-for-aws-batch-nextflow/)
+
+## aws-blast-performance-testing
+- [비용 분석 (Cost Analysis)](/aws-blast-performance-testing/cost-analysis/)
+- [EBS Snapshot 프로비저닝 성능 분석](/aws-blast-performance-testing/ebs-snapshot/)
+- [EBS 최적화 아키텍처 테스트 결과](/aws-blast-performance-testing/ebs/)
+- [EFS vs FSx for Lustre 비교 분석 (실제 테스트 결과 포함)](/aws-blast-performance-testing/efs-vs-fsx-for-lustre/)
+- [아키텍처 개요](/aws-blast-performance-testing/아키텍처-개요/)
+
+## decision-models-on-aws
+- [[DRAFT] 병원편 — 결정은 서울 안에서, 생성은 비개인 데이터만 밖으로: 결정 모델과 Amazon Bedrock으로 국내 처리 요건을 지키는 병원 AI 설계](/decision-models-on-aws/draft-amazon-bedrock-ai/)
+- [[DRAFT] \"결정 모델(System One)\"을 AWS에서 쓰는 방법 — 자체 호스팅 결정 모델 vs Amazon Bedrock Claude 5.5, 서울 리전 실측](/decision-models-on-aws/draft-system-one-aws-vs-amazon-bedrock-claude-55/)
+
+## draft-gbrain
+- [[DRAFT] gbrain 검색 파이프라인 이해하기: 하이브리드 검색에서 무엇을 고를 수 있고, 논문 코퍼스에는 어떻게 맞출까](/draft-gbrain/draft-gbrain/)
+
+## genome-data-delivery-portal-on-aws
+- [Storage Browser for S3와 CloudFront 정액제로 수백 GB 유전체 데이터 배포 포털 만들기](/genome-data-delivery-portal-on-aws/storage-browser-for-s3-cloudfront-gb/)
+
+## ncbi-blast-on-aws
+- [BLAST 검색 서비스를 AWS에 올리기 전에 답해야 할 5가지 질문: 백엔드 선택 가이드](/ncbi-blast-on-aws/blast-aws-5/)
+- [ElasticBLAST로 AWS에서 대규모 NCBI BLAST 검색 실행하기: 동작 원리, 비용, 알아야 할 제약](/ncbi-blast-on-aws/elasticblast-aws-ncbi-blast/)
+
+## omics-on-aws
+- [Amazon Genomics CLI - 핸즈온 가이드](/omics-on-aws/amazon-genomics-cli-vdj/)
+- [AWS HealthOmics 워크플로우를 위한 CI/CD 파이프라인 구축하기](/omics-on-aws/aws-healthomics-cicd/)
+- [태스크 동시성 제한이 AWS HealthOmics 워크플로우 실행의 스토리지 비용을 증가시키는 원리](/omics-on-aws/aws-healthomics-ksh/)
+- [How Task Concurrency Limits Increase Storage Costs in AWS HealthOmics Workflow Runs](/omics-on-aws/how-task-concurrency-limits-increase-storage-costs-in-aws-healthomics-workflow-runs/)
+- [AWS 아키텍처 전략](/omics-on-aws/hpp-production-workflows/aws/)
+- [개요 및 Executive Summary](/omics-on-aws/hpp-production-workflows/executive-summary/)
+- [FAQ 및 결론](/omics-on-aws/hpp-production-workflows/faq/)
+- [보안 및 IAM 전략](/omics-on-aws/hpp-production-workflows/iam/)
+- [리소스 요구사항 및 TCO 분석](/omics-on-aws/hpp-production-workflows/tco/)
+- [구현 로드맵 및 마이그레이션 전략](/omics-on-aws/hpp-production-workflows/구현-로드맵-및-마이그레이션-전략/)
+- [도전과제 및 해결방안](/omics-on-aws/hpp-production-workflows/도전과제-및-해결방안/)
+- [모니터링 및 운영 전략](/omics-on-aws/hpp-production-workflows/모니터링-및-운영-전략/)
+- [모범 사례 및 권장사항](/omics-on-aws/hpp-production-workflows/모범-사례-및-권장사항/)
+- [스토리지 전략 및 성능 최적화](/omics-on-aws/hpp-production-workflows/스토리지-전략-및-성능-최적화/)
+- [실전 트러블슈팅 가이드](/omics-on-aws/hpp-production-workflows/실전-트러블슈팅-가이드/)
+- [프로젝트 분석 및 기술 스택](/omics-on-aws/hpp-production-workflows/프로젝트-분석-및-기술-스택/)
+- [Amazon EMR on EC2](/omics-on-aws/hail-on-aws/amazon-emr-on-ec2/)
+- [AWS Glue](/omics-on-aws/hail-on-aws/aws-glue/)
+- [Hail with Amazon EMR notebook](/omics-on-aws/hail-on-aws/hail-with-amazon-emr-notebook/)
+- [Quickstart Hail (English)](/omics-on-aws/hail-on-aws/quickstart-hail-english/)
+- [Quickstart Hail (Korean)](/omics-on-aws/hail-on-aws/quickstart-hail-korean/)
+- [Example code](/omics-on-aws/nextflow/example-code/)
+- [Store multimodal data with purpose-built Health AI services](/omics-on-aws/multi-modal-analysis/store-multimodal-data-with-purpose-built-health-ai-services/)
+- [소개 및 실습 준비](/omics-on-aws/multi-modal-analysis/소개-및-실습-준비/)
+- [1편 · AlphaMissense 7,100만 missense 변이 점수표를 Amazon Athena로 조회하기: 서버 없는 변이 주석 데이터 레이크](/omics-on-aws/alphagenome-alphamissense-on-aws/1-alphamissense-7100-missense-amazon-athena/)
+- [2편 · AlphaGenome을 내 AWS 계정의 GPU에서 직접 돌리기 — 그리고 SageMaker로 API까지](/omics-on-aws/alphagenome-alphamissense-on-aws/2-alphagenome-aws-gpu-sagemaker-api/)
+- [AWS HealthOmics에서 Annotation 작업 수행하기](/omics-on-aws/aws-healthomics/aws-healthomics-annotation/)
+- [AWS HealthOmics로 유전체 분석 (Fastq to VCF, Annotation) 자동화하기](/omics-on-aws/aws-healthomics/aws-healthomics-fastq-to-vcf-annotation/)
+- [AWS HealthOmics에서 nf-core/sarek 3.9.0 실행하기](/omics-on-aws/aws-healthomics/aws-healthomics-nf-coresarek-390/)
+- [AWS HealthOmics Run Analyzer 분석 리포트](/omics-on-aws/aws-healthomics/aws-healthomics-run-analyzer/)
+- [AWS HealthOmics - Storage](/omics-on-aws/aws-healthomics/aws-healthomics-storage/)
+- [AWS HealthOmics - Troubleshooting](/omics-on-aws/aws-healthomics/aws-healthomics-troubleshooting/)
+- [AWS HealthOmics 소개 및 주요 링크](/omics-on-aws/aws-healthomics/aws-healthomics/)
+- [Call Caching](/omics-on-aws/aws-healthomics/call-caching/)
+- [Lessons Learned: WARP ExomeGermlineSingleSample → AWS HealthOmics 마이그레이션](/omics-on-aws/aws-healthomics/lessons-learned-warp-exomegermlinesinglesample-aws-healthomics/)
+- [Nf-core 워크플로우 마이그레이션 하기 (rnaseq)](/omics-on-aws/aws-healthomics/nf-core-rnaseq/)
+- [Nf-core 워크플로우 마이그레이션 하기 (scrnaseq)](/omics-on-aws/aws-healthomics/nf-core-scrnaseq/)
+- [Nf-core 워크플로우 마이그레이션 하기 (spatialvi)](/omics-on-aws/aws-healthomics/nf-core-spatialvi/)
+- [Run Analzyer](/omics-on-aws/aws-healthomics/run-analzyer/)
+- [Running nf-core/sarek 3.9.0 on AWS HealthOmics](/omics-on-aws/aws-healthomics/running-nf-coresarek-390-on-aws-healthomics/)
+- [VPC-Connected Workflows: Accessing the Internet and Cross-Region S3 from Workflows](/omics-on-aws/aws-healthomics/vpc-connected-workflows-accessing-the-internet-and-cross-region-s3-from-workflows/)
+- [VPC-Connected Workflows: 워크플로우에서 인터넷과 크로스 리전 S3에 접근하기](/omics-on-aws/aws-healthomics/vpc-connected-workflows-s3/)
+- [WDL 워크플로우 마이그레이션 하기 (HiFi-human-WGS-WDL)](/omics-on-aws/aws-healthomics/wdl-hifi-human-wgs-wdl/)
+- [몇 가지 기능과 알아둘 것들](/omics-on-aws/aws-healthomics/몇-가지-기능과-알아둘-것들/)
+
+## s3
+- [S3 Select 기능 소개](/s3/amazon-s3/s3-select/)
+- [예제 데이터](/s3/amazon-s3/예제-데이터/)
+- [추천 링크](/s3/amazon-s3/추천-링크/)
