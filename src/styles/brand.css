@@ -1,0 +1,21 @@
+/* Brand settings carried over from the BookStack site (primary #206ea7, Amazon Ember + Noto Sans KR). */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+@font-face {
+  font-family: 'Amazon Ember';
+  src: url('https://m.media-amazon.com/images/S/sash/pDxWAF1pBB0dzGB.woff2') format('woff2');
+  font-display: swap;
+}
+
+:root {
+  --sl-font: 'Amazon Ember', 'Noto Sans KR', system-ui, sans-serif;
+  /* light theme accent */
+  --sl-color-accent-low: #d7e8f5;
+  --sl-color-accent: #206ea7;
+  --sl-color-accent-high: #12405f;
+}
+:root[data-theme='dark'] {
+  --sl-color-accent-low: #0f2a3f;
+  --sl-color-accent: #429fe3;
+  --sl-color-accent-high: #a9d3f5;
+}
