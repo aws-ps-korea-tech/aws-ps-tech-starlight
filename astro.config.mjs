@@ -16,7 +16,14 @@ export default defineConfig({
   base: BASE,
   integrations: [
     starlight({
-      title: 'AWS PS Tech',
+      title: 'AWS Korea Public Sector SA Team',
+      logo: { light: './src/assets/logo-dark.png', dark: './src/assets/logo-light.png', alt: 'AWS', replacesTitle: false },
+      favicon: '/favicon.png',
+      customCss: ['./src/styles/brand.css'],
+      components: {
+        Banner: './src/components/Banner.astro',
+        Footer: './src/components/Footer.astro',
+      },
       pagefind: true,
       plugins: [
         starlightSidebarTopics([
