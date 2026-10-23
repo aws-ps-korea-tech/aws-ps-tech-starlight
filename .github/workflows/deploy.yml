@@ -29,6 +29,9 @@ jobs:
         run: npm ci
       - name: Build
         run: npx astro build
+        env:
+          DEPLOY_BASE: /starlight
+          DEPLOY_SITE: https://aws-ps-korea-tech.github.io
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

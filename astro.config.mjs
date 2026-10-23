@@ -2,9 +2,17 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 
+// Base path is platform-dependent:
+//   GitHub Pages serves under /starlight  -> set DEPLOY_BASE=/starlight (CI default)
+//   Cloudflare Pages / Netlify serve at root -> leave DEPLOY_BASE unset (= '/')
+// This lets the SAME repo deploy to all three; only CF/Netlify give real 301s
+// (they read public/_redirects natively), so use those for SEO-critical prod.
+const BASE = process.env.DEPLOY_BASE ?? '/';
+const SITE = process.env.DEPLOY_SITE ?? 'https://aws-ps-korea-tech.github.io';
+
 export default defineConfig({
-  site: 'https://aws-ps-korea-tech.github.io',
-  base: '/starlight',
+  site: SITE,
+  base: BASE,
   integrations: [
     starlight({
       title: 'AWS PS Tech',
