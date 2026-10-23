@@ -24,7 +24,7 @@ title: "Amazon EMR on EC2"
 
 여기서는 `emr-primary-sg` 와 `emr-core-sg` 로 이름을 지정했습니다.
 
-![Screenshot 2024-04-18 at 11.37.33 PM.png](_assets/c903486d25f3.png)[ ](_assets/f70d1fda240d.png)![Screenshot 2024-04-18 at 11.40.01 PM.png](_assets/49efabcf72fd.png)
+![Screenshot 2024-04-18 at 11.37.33 PM.png](_assets/c903486d25f3.png)![](_assets/f70d1fda240d.png)![Screenshot 2024-04-18 at 11.40.01 PM.png](_assets/49efabcf72fd.png)
 
 AWS CloudFormation 을 사용하는 방법도 있습니다. [여기를 참고](https://catalog.us-east-1.prod.workshops.aws/workshops/c86bd131-f6bf-4e8f-b798-58fd450d3c44/en-US/setup/selfpaced/prerequisites)하세요.
 
