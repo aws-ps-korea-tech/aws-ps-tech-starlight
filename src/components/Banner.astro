@@ -1,0 +1,32 @@
+---
+// Site-wide disclaimer banner (taken from the BookStack site's custom header).
+---
+
+<div class="ps-disclaimer" data-pagefind-ignore role="note">
+  ⚠️ 이 사이트의 게시물은 최신 정보를 반영하지 않을 수 있으며, <strong>AWS 공식 콘텐츠가 아닙니다.</strong>
+  최신 정보는 <a href="https://docs.aws.amazon.com" target="_blank" rel="noopener">AWS 공식 문서</a>를 참고하세요.
+</div>
+
+<style>
+  .ps-disclaimer {
+    background: #fff3cd;
+    border-bottom: 1px solid #ffc107;
+    color: #664d03;
+    font-size: 0.8125rem;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    line-height: 1.4;
+  }
+  .ps-disclaimer :global(a) {
+    color: #664d03;
+    text-decoration: underline;
+  }
+  :global([data-theme='dark']) .ps-disclaimer {
+    background: #3d3100;
+    border-bottom-color: #8a6d00;
+    color: #ffe69c;
+  }
+  :global([data-theme='dark']) .ps-disclaimer :global(a) {
+    color: #ffe69c;
+  }
+</style>
