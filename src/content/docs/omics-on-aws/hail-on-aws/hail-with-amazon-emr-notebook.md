@@ -1,8 +1,8 @@
 ---
 title: "Hail with Amazon EMR notebook"
-sidebar:
-  order: 2
 ---
+
+# Hail with Amazon EMR notebook
 
 ### 노트북 셋업
 
@@ -35,18 +35,17 @@ pip install hail
 
 <span style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0); font-family: -webkit-standard; font-size: medium; font-style: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration: none; display: inline !important; float: none;">Primary 노드의 인스턴스 EC2 Monitoring</span>
 
-[![Screenshot 2024-05-21 at 4.34.18 PM.png](./_images/screenshot-2024-05-21-at-4-34-18-pm.png)](https://www.aws-ps-tech.kr/uploads/images/gallery/2024-05/screenshot-2024-05-21-at-4-34-18-pm.png)
+![Screenshot 2024-05-21 at 4.34.18 PM.png](_assets/4cfd3220afe8.png)
 
 **Core 노드의 인스턴스 EC2 Monitoring**
 
-[![Screenshot 2024-05-21 at 4.35.31 PM.png](./_images/screenshot-2024-05-21-at-4-35-31-pm.png)](https://www.aws-ps-tech.kr/uploads/images/gallery/2024-05/screenshot-2024-05-21-at-4-35-31-pm.png)
+![Screenshot 2024-05-21 at 4.35.31 PM.png](_assets/0166b28c3b5b.png)
 
 **예제 노트북 다운로드**
 
 [hail-tutorial.zip](https://www.aws-ps-tech.kr/attachments/1)
 
-### **참고문서**
-
+### 참고문서
 - [https://hail.is/docs/0.2/tutorials/01-genome-wide-association-study.html#Quality-Control](https://hail.is/docs/0.2/tutorials/01-genome-wide-association-study.html#Quality-Control)
 - [https://github.com/hmkim/quickstart-hail/tree/main/packer-files/scripts](https://github.com/hmkim/quickstart-hail/tree/main/packer-files/scripts)
 - **EMR on EC2로 Hail 쥬피터를 사용하기 위한 EMR 노트북 환경 구성**
