@@ -1,6 +1,6 @@
-# AWS PS Tech Korea — Docs
+# AWS Korea Public Sector SA Team — Docs
 
-> AWS Professional Services Korea 기술 문서. BookStack에서 이관된 정적 문서 모음.
+> AWS Korea Public Sector SA Team 기술 문서. BookStack에서 이관된 정적 문서 모음.
 
 ## ai-agent-memory-on-aws
 - [AI 에이전트에게 \"내 기억\"을 달아주기 — GBrain을 AWS에 프라이빗하게 배포하고 노트북에서 쓰는 법](/ai-agent-memory-on-aws/ai-gbrain-aws/)
