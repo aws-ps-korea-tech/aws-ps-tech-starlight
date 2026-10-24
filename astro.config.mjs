@@ -4,7 +4,7 @@ import starlight from '@astrojs/starlight';
 import starlightSidebarTopics from 'starlight-sidebar-topics';
 
 // Base path is platform-dependent:
-//   GitHub Pages serves under /starlight  -> set DEPLOY_BASE=/starlight (CI default)
+//   GitHub Pages serves under /aws-ps-tech-starlight  -> set DEPLOY_BASE=/aws-ps-tech-starlight (CI default)
 //   Cloudflare Pages / Netlify serve at root -> leave DEPLOY_BASE unset (= '/')
 // This lets the SAME repo deploy to all three; only CF/Netlify give real 301s
 // (they read public/_redirects natively), so use those for SEO-critical prod.
