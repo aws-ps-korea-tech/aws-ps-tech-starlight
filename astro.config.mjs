@@ -36,6 +36,7 @@ export default defineConfig({
             { label: "Amazon S3", items: [{ autogenerate: { directory: 's3' } }] },
             { label: "Data Transfer", items: [{ autogenerate: { directory: 'data-transfer' } }] },
             { label: "FSx for Lustre", items: [{ autogenerate: { directory: 'fsx-for-lustre' } }] },
+            { label: "GxP on AWS", items: [{ autogenerate: { directory: 'gxp-on-aws' } }] },
           ],
         },
         {
