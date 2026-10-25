@@ -29,27 +29,23 @@ export default defineConfig({
         starlightSidebarTopics([
         {
           id: 'start',
-        label: "시작하기",
+        label: "시작하기·계정",
           link: '/aws/',
           items: [
             { label: "대학 고객을 위한 AWS 길라잡이", items: [{ autogenerate: { directory: 'aws' } }] },
             { label: "Amazon S3", items: [{ autogenerate: { directory: 's3' } }] },
-            { label: "Data Transfer", items: [{ autogenerate: { directory: 'data-transfer' } }] },
-            { label: "FSx for Lustre", items: [{ autogenerate: { directory: 'fsx-for-lustre' } }] },
-            { label: "GxP on AWS", items: [{ autogenerate: { directory: 'gxp-on-aws' } }] },
           ],
         },
         {
-          label: "오믹스·유전체",
+          label: "유전체·오믹스",
           link: '/omics-on-aws/',
           items: [
             { label: "Omics on AWS", items: [{ autogenerate: { directory: 'omics-on-aws' } }] },
             { label: "Genome Data Delivery Portal on AWS", items: [{ autogenerate: { directory: 'genome-data-delivery-portal-on-aws' } }] },
-            { label: "Amazon Bio Discovery로 AI 항체 설계 시작하기", items: [{ autogenerate: { directory: 'amazon-bio-discovery-ai' } }] },
           ],
         },
         {
-          label: "배치·BLAST",
+          label: "HPC·배치·BLAST",
           link: '/aws-batch/',
           items: [
             { label: "AWS Batch", items: [{ autogenerate: { directory: 'aws-batch' } }] },
@@ -59,18 +55,30 @@ export default defineConfig({
         },
         {
           id: 'ai',
-        label: "AI·의사결정",
-          link: '/ai-agent-memory-on-aws/',
+        label: "AI·ML",
+          link: '/amazon-bio-discovery-ai/',
           items: [
+            { label: "Amazon Bio Discovery로 AI 항체 설계 시작하기", items: [{ autogenerate: { directory: 'amazon-bio-discovery-ai' } }] },
             { label: "AI Agent Memory on AWS", items: [{ autogenerate: { directory: 'ai-agent-memory-on-aws' } }] },
             { label: "Decision Models on AWS", items: [{ autogenerate: { directory: 'decision-models-on-aws' } }] },
+          ],
+        },
+        {
+          label: "규제·거버넌스",
+          link: '/gxp-on-aws/',
+          items: [
+            { label: "GxP on AWS", items: [{ autogenerate: { directory: 'gxp-on-aws' } }] },
           ],
         },
       ], {
         // Empty / draft books: built and reachable by URL, shown under a tab's navigation
         // but not listed in its sidebar.
         topics: {
-          start: ['/egovframework-on-aws', '/egovframework-on-aws/**'],
+          start: [
+            '/egovframework-on-aws', '/egovframework-on-aws/**',
+            '/data-transfer', '/data-transfer/**',
+            '/fsx-for-lustre', '/fsx-for-lustre/**',
+          ],
           ai: ['/draft-gbrain', '/draft-gbrain/**'],
         },
         exclude: ['/'],
