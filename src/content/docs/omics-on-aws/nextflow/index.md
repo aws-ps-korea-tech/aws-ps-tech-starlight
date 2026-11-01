@@ -1,7 +1,0 @@
----
-title: "Nextflow"
----
-
-# Nextflow
-
-
