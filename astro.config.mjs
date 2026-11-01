@@ -68,6 +68,7 @@ export default defineConfig({
           link: '/gxp-on-aws/',
           items: [
             { label: "GxP on AWS", items: [{ autogenerate: { directory: 'gxp-on-aws' } }] },
+            { label: "[DRAFT] ISMS-P on AWS", items: [{ autogenerate: { directory: 'draft-isms-p-on-aws' } }] },
           ],
         },
       ], {
