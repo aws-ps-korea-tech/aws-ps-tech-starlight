@@ -82,6 +82,7 @@ export default defineConfig({
             '/data-transfer', '/data-transfer/**',
             '/fsx-for-lustre', '/fsx-for-lustre/**',
             '/s3', '/s3/**',
+            '/aws/쉽게-따라하는-연구실-계정-관리',
           ],
           ai: ['/draft-gbrain', '/draft-gbrain/**', '/decision-models-on-aws', '/decision-models-on-aws/**'],
           omics: ['/draft-alphagenome-on-aws', '/draft-alphagenome-on-aws/**'],
