@@ -33,17 +33,14 @@ export default defineConfig({
           link: '/aws/',
           items: [
             { label: "대학 고객을 위한 AWS 길라잡이", items: [{ autogenerate: { directory: 'aws' } }] },
+            { label: "Amazon S3", items: [{ autogenerate: { directory: 's3' } }] },
           ],
         },
         {
-          id: 'omics',
           label: "유전체·오믹스",
           link: '/omics-on-aws/',
           items: [
-            { label: "AWS HealthOmics", items: [{ autogenerate: { directory: 'omics-on-aws' } }] },
-            { label: "HealthOmics 워크플로우 마이그레이션", items: [{ autogenerate: { directory: 'healthomics-workflow-migration' } }] },
-            { label: "HPP Production Workflows on AWS", items: [{ autogenerate: { directory: 'hpp-production-workflows-on-aws' } }] },
-            { label: "유전체 데이터 분석 (Hail·멀티모달)", items: [{ autogenerate: { directory: 'genomics-analytics-on-aws' } }] },
+            { label: "Omics on AWS", items: [{ autogenerate: { directory: 'omics-on-aws' } }] },
             { label: "Genome Data Delivery Portal on AWS", items: [{ autogenerate: { directory: 'genome-data-delivery-portal-on-aws' } }] },
           ],
         },
@@ -63,6 +60,7 @@ export default defineConfig({
           items: [
             { label: "Amazon Bio Discovery로 AI 항체 설계 시작하기", items: [{ autogenerate: { directory: 'amazon-bio-discovery-ai' } }] },
             { label: "AI Agent Memory on AWS", items: [{ autogenerate: { directory: 'ai-agent-memory-on-aws' } }] },
+            { label: "Decision Models on AWS", items: [{ autogenerate: { directory: 'decision-models-on-aws' } }] },
           ],
         },
         {
@@ -81,11 +79,8 @@ export default defineConfig({
             '/egovframework-on-aws', '/egovframework-on-aws/**',
             '/data-transfer', '/data-transfer/**',
             '/fsx-for-lustre', '/fsx-for-lustre/**',
-            '/s3', '/s3/**',
-            '/aws/쉽게-따라하는-연구실-계정-관리',
           ],
-          ai: ['/draft-gbrain', '/draft-gbrain/**', '/decision-models-on-aws', '/decision-models-on-aws/**'],
-          omics: ['/draft-alphagenome-on-aws', '/draft-alphagenome-on-aws/**'],
+          ai: ['/draft-gbrain', '/draft-gbrain/**'],
         },
         exclude: ['/'],
       }),

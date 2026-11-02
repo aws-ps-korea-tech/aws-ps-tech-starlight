@@ -1,7 +1,7 @@
 ---
-title: "AWS HealthOmics"
+title: "Omics on AWS"
 ---
 
-# AWS HealthOmics
+# Omics on AWS
 
 
