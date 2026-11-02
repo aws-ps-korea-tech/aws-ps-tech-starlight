@@ -1,7 +1,6 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
-import starlightSidebarTopics from 'starlight-sidebar-topics';
 
 // Base path is platform-dependent:
 //   GitHub Pages serves under /aws-ps-tech-starlight  -> set DEPLOY_BASE=/aws-ps-tech-starlight (CI default)
@@ -25,65 +24,23 @@ export default defineConfig({
         Footer: './src/components/Footer.astro',
       },
       pagefind: true,
-      plugins: [
-        starlightSidebarTopics([
-        {
-          id: 'start',
-        label: "시작하기·계정",
-          link: '/aws/',
-          items: [
-            { label: "대학 고객을 위한 AWS 길라잡이", items: [{ autogenerate: { directory: 'aws' } }] },
-            { label: "Amazon S3", items: [{ autogenerate: { directory: 's3' } }] },
-          ],
-        },
-        {
-          label: "유전체·오믹스",
-          link: '/omics-on-aws/',
-          items: [
-            { label: "Omics on AWS", items: [{ autogenerate: { directory: 'omics-on-aws' } }] },
-            { label: "Genome Data Delivery Portal on AWS", items: [{ autogenerate: { directory: 'genome-data-delivery-portal-on-aws' } }] },
-          ],
-        },
-        {
-          label: "HPC·배치·BLAST",
-          link: '/aws-batch/',
-          items: [
-            { label: "AWS Batch", items: [{ autogenerate: { directory: 'aws-batch' } }] },
-            { label: "NCBI BLAST on AWS", items: [{ autogenerate: { directory: 'ncbi-blast-on-aws' } }] },
-            { label: "AWS BLAST Performance Testing", items: [{ autogenerate: { directory: 'aws-blast-performance-testing' } }] },
-          ],
-        },
-        {
-          id: 'ai',
-        label: "AI·ML",
-          link: '/amazon-bio-discovery-ai/',
-          items: [
-            { label: "Amazon Bio Discovery로 AI 항체 설계 시작하기", items: [{ autogenerate: { directory: 'amazon-bio-discovery-ai' } }] },
-            { label: "AI Agent Memory on AWS", items: [{ autogenerate: { directory: 'ai-agent-memory-on-aws' } }] },
-            { label: "Decision Models on AWS", items: [{ autogenerate: { directory: 'decision-models-on-aws' } }] },
-          ],
-        },
-        {
-          label: "규제·거버넌스",
-          link: '/gxp-on-aws/',
-          items: [
-            { label: "GxP on AWS", items: [{ autogenerate: { directory: 'gxp-on-aws' } }] },
-            { label: "[DRAFT] ISMS-P on AWS", items: [{ autogenerate: { directory: 'draft-isms-p-on-aws' } }] },
-          ],
-        },
-      ], {
-        // Empty / draft books: built and reachable by URL, shown under a tab's navigation
-        // but not listed in its sidebar.
-        topics: {
-          start: [
-            '/egovframework-on-aws', '/egovframework-on-aws/**',
-            '/data-transfer', '/data-transfer/**',
-            '/fsx-for-lustre', '/fsx-for-lustre/**',
-          ],
-          ai: ['/draft-gbrain', '/draft-gbrain/**'],
-        },
-        exclude: ['/'],
-      }),
+      // One flat book list, same books and order as the BookStack book list.
+      // Books that are not public in BookStack (data-transfer, decision-models-on-aws, draft-gbrain)
+      // are built and reachable by URL but not listed.
+      sidebar: [
+        { label: "[DRAFT] ISMS-P on AWS", collapsed: true, items: [{ autogenerate: { directory: 'draft-isms-p-on-aws' } }] },
+        { label: "AI Agent Memory on AWS", collapsed: true, items: [{ autogenerate: { directory: 'ai-agent-memory-on-aws' } }] },
+        { label: "Amazon Bio Discovery로 AI 항체 설계 시작하기", collapsed: true, items: [{ autogenerate: { directory: 'amazon-bio-discovery-ai' } }] },
+        { label: "Amazon S3", collapsed: true, items: [{ autogenerate: { directory: 's3' } }] },
+        { label: "AWS Batch", collapsed: true, items: [{ autogenerate: { directory: 'aws-batch' } }] },
+        { label: "AWS BLAST Performance Testing", collapsed: true, items: [{ autogenerate: { directory: 'aws-blast-performance-testing' } }] },
+        { label: "eGovFramework on AWS", collapsed: true, items: [{ autogenerate: { directory: 'egovframework-on-aws' } }] },
+        { label: "FSx for Lustre", collapsed: true, items: [{ autogenerate: { directory: 'fsx-for-lustre' } }] },
+        { label: "Genome Data Delivery Portal on AWS", collapsed: true, items: [{ autogenerate: { directory: 'genome-data-delivery-portal-on-aws' } }] },
+        { label: "GxP on AWS", collapsed: true, items: [{ autogenerate: { directory: 'gxp-on-aws' } }] },
+        { label: "NCBI BLAST on AWS", collapsed: true, items: [{ autogenerate: { directory: 'ncbi-blast-on-aws' } }] },
+        { label: "Omics on AWS", collapsed: true, items: [{ autogenerate: { directory: 'omics-on-aws' } }] },
+        { label: "대학 고객을 위한 AWS 길라잡이", collapsed: true, items: [{ autogenerate: { directory: 'aws' } }] },
       ],
     }),
   ],
