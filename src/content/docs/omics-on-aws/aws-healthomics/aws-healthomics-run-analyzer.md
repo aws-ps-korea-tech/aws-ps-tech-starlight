@@ -140,7 +140,3 @@ python -m omics.cli.run_analyzer <RUN_ID> -o output.csv
 *이 리포트는 Claude Code를 통해 자동 생성되었습니다.*
 
 <div id="bkmrk--8"></div>
-
-## Run Analzyer
-
-https://aws.amazon.com/blogs/industries/reduce-genomic-discovery-time-and-costs-aws-healthomics-run-analyzer/
